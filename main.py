@@ -44,7 +44,7 @@ def main():
             for shot in shots:
                 if asteroid.detect_collisions(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split(ASTEROID_MIN_RADIUS)
 
         screen.fill("black")
 
